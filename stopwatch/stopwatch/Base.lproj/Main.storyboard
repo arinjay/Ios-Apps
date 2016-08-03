@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xoM-uY-XWH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="BdD-7b-ekf"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="StopWatch" id="UXa-RR-Tbd">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="play" id="ieu-C5-ROg">
+                                            <color key="tintColor" red="0.00053634139476343989" green="0.044929049909114838" blue="0.99988633394241333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <action selector="play:" destination="BYZ-38-t0r" id="ctm-KZ-Lu3"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dK6-cX-KrV">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="NNH-ds-QUV"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem title="Reset" id="I7E-ui-CJp">
+                                        <color key="tintColor" red="0.97552794218063354" green="0.4009740948677063" blue="0.044736109673976898" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" id="nOt-j5-gC4"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="245" style="plain" systemItem="fixedSpace" id="9hF-Xc-mEJ"/>
+                                    <barButtonItem title="Pause It" id="UdS-8w-Ih4">
+                                        <color key="tintColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <action selector="pause:" destination="BYZ-38-t0r" id="Cxb-Uj-hr7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="     0" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ntf-XF-6Lt">
+                                <rect key="frame" x="103" y="224" width="168" height="219"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="168" id="09Q-5t-hVN"/>
+                                    <constraint firstAttribute="height" constant="219" id="UtL-2q-RCO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="55"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="0.53103448275862064" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ntf-XF-6Lt" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BiN-si-ZhB"/>
+                            <constraint firstItem="Ntf-XF-6Lt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DU9-mk-kT5"/>
+                            <constraint firstItem="xoM-uY-XWH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HCC-Nq-dzU"/>
+                            <constraint firstItem="xoM-uY-XWH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="OkN-eg-TwS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dK6-cX-KrV" secondAttribute="trailing" constant="-20" id="UFc-Rn-Yn6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dK6-cX-KrV" secondAttribute="bottom" id="dwN-Hv-FG0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xoM-uY-XWH" secondAttribute="trailing" constant="-20" id="erj-Fl-jdE"/>
+                            <constraint firstItem="dK6-cX-KrV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="fqa-GO-wyO"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="timerLabel" destination="Ntf-XF-6Lt" id="394-nw-kDL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="429.5"/>
+        </scene>
+    </scenes>
+</document>
