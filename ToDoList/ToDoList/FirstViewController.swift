@@ -47,6 +47,22 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         
         return cell
     }
+   
+    
+    //method called when we do some editing 
+    // in this we are using swipe left
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            
+            toDoList.removeAtIndex(indexPath.row)
+            
+            NSUserDefaults.standardUserDefaults().setObject(toDoList, forKey: "toDoList")
+            
+            toDolistTable.reloadData()
+        }
+        
+    }
     
     
     override func viewDidAppear(animated: Bool) {
