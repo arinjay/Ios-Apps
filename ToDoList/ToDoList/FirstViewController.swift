@@ -49,8 +49,8 @@ class FirstViewController: UIViewController, UITableViewDelegate {
     }
    
     
-    //method called when we do some editing 
-    // in this we are using swipe left
+    //method called when we do some Editing
+    // In this we are using swipe left
     func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath){
         
         if editingStyle == UITableViewCellEditingStyle.Delete {
