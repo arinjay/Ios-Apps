@@ -10,8 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
+    //@IBOutlet weak var detailDescriptionLabel: UILabel!
 
+    @IBOutlet var webView: UIWebView!
 
     var detailItem: AnyObject? {
         didSet {
@@ -22,9 +23,11 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.valueForKey("title")!.description
+        if let detail = self.detailItem {         //check for details
+            if let postwebview = self.webView {   //check for webviews
+                
+                postwebview.loadHTMLString(detail.valueForKey("content")!.description, baseURL: NSURL(string: "https://googleblog.blogspot.in/"));
+                
             }
         }
     }

@@ -1,4 +1,4 @@
- //
+
 //  MasterViewController.swift
 //  Blog Reader
 //
@@ -106,12 +106,11 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         
         
         
-        
+    // removing add button functionality
         // Do any additional setup after loading the view, typically from a nib.
-        self.navigationItem.leftBarButtonItem = self.editButtonItem()
-
-        let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
-        self.navigationItem.rightBarButtonItem = addButton
+        //self.navigationItem.leftBarButtonItem = self.editButtonItem()
+        //let addButton = UIBarButtonItem(barButtonSystemItem: .Add, target: self, action: "insertNewObject:")
+        //self.navigationItem.rightBarButtonItem = addButton
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
@@ -146,7 +145,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // MARK: - Table View
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return self.fetchedResultsController.sections?.count ?? 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -189,7 +188,7 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     // MARK: - Fetched results controller
 
     var fetchedResultsController: NSFetchedResultsController {
-        if _fetchedResultsController != nil {
+        if _fetchedResultsController != nil {   //checks if anything is in core data.
             return _fetchedResultsController!
         }
         
