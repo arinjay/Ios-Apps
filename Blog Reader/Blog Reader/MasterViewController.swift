@@ -18,6 +18,10 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appDel: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        
+        let context : NSManagedObjectContext = appDel.managedObjectContext
+        
         let url = NSURL(string:"https://www.googleapis.com/blogger/v3/blogs/10861780/posts?key=AIzaSyDlo6qev7GTJKW9gNL82WrgjxTmEoC3RK4")!;
         
         let session = NSURLSession.sharedSession();
@@ -44,12 +48,38 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
                             
                             if let items = jsonResult["items"] as? NSArray {
                                 
+                                 //clearing core data so that the items are not saved repeatedly
+                                let request = NSFetchRequest(entityName: "BlogItems")
+                                
+                                request.returnsObjectsAsFaults = false
+                                
+                                do { let results = try context.executeFetchRequest(request)
+                                
+                                    if results.count > 0 {
+                                        for result in results {
+                                            context.deleteObject(result as! NSManagedObject)
+                                            
+                                            do{ try context.save() } catch{}
+                                            
+                                        }
+                                    }
+                                    
+                                }
+                                    
+                                catch{}
+                                
                                 for item in items{
                                 
                                     if let title = item["title"] as? String{
                                 
                                         if let content = item["content"] as? String{
-                                        
+                                            
+                                            
+                                            let newPost: NSManagedObject = NSEntityDescription.insertNewObjectForEntityForName("BlogItems", inManagedObjectContext: context)
+                                            
+                                            newPost.setValue(title, forKey: "title")
+                                            newPost.setValue(content, forKey: "content")
+                                            
                                             print(title)
                                             print(content)
                                         }
