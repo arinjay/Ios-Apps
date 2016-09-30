@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space-bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="m2x-zK-fxH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m2x-zK-fxH" secondAttribute="height" multiplier="375:667" id="sYo-pm-Rf6"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backpanel.png" translatesAutoresizingMaskIntoConstraints="NO" id="I6O-pA-St3">
+                                <rect key="frame" x="28" y="252" width="318" height="380"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="I6O-pA-St3" secondAttribute="height" multiplier="159:190" id="5fE-IQ-zgs"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="counter.png" translatesAutoresizingMaskIntoConstraints="NO" id="hv7-vy-BA4">
+                                <rect key="frame" x="28" y="51" width="312" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="m2x-zK-fxH" secondAttribute="trailing" id="5Ar-m7-RzL"/>
+                            <constraint firstItem="m2x-zK-fxH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="75z-AK-d6c"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="I6O-pA-St3" secondAttribute="bottom" constant="35" id="BBj-m4-X4d"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="m2x-zK-fxH" secondAttribute="bottom" id="ONq-Wj-wVo"/>
+                            <constraint firstAttribute="trailing" secondItem="I6O-pA-St3" secondAttribute="trailing" constant="29" id="azx-8z-4gD"/>
+                            <constraint firstItem="hv7-vy-BA4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" multiplier="2" constant="31" id="bZo-hF-ucQ"/>
+                            <constraint firstItem="hv7-vy-BA4" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="28" id="i2i-9r-n8G"/>
+                            <constraint firstAttribute="trailing" secondItem="hv7-vy-BA4" secondAttribute="trailing" constant="35" id="j7q-SO-KTm"/>
+                            <constraint firstItem="I6O-pA-St3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="28" id="lwn-Ni-zMj"/>
+                            <constraint firstItem="m2x-zK-fxH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="v5d-no-Ujk"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="429.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="backpanel.png" width="620" height="938"/>
+        <image name="counter.png" width="516" height="133"/>
+        <image name="space-bg.png" width="988" height="946"/>
+    </resources>
+</document>
