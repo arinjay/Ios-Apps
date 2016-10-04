@@ -63,14 +63,14 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="go9-VD-81n">
                                 <rect key="frame" x="79" y="129" width="210" height="80"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="TpB-8B-evh">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart.png" translatesAutoresizingMaskIntoConstraints="NO" id="TpB-8B-evh" customClass="DragImage" customModule="littlemoster" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="fRy-N6-SuQ"/>
                                             <constraint firstAttribute="width" constant="80" id="wAg-lh-D76"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food.png" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-Wz-BIa">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food.png" translatesAutoresizingMaskIntoConstraints="NO" id="xqe-Wz-BIa" customClass="DragImage" customModule="littlemoster" customModuleProvider="target">
                                         <rect key="frame" x="130" y="0.0" width="80" height="80"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="80" id="d1r-H0-DVW"/>
@@ -79,7 +79,7 @@
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="idle (1).png" translatesAutoresizingMaskIntoConstraints="NO" id="hEU-eo-CWB">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="idle1.png" translatesAutoresizingMaskIntoConstraints="NO" id="hEU-eo-CWB" customClass="MonsterImg" customModule="littlemoster" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="217" width="521" height="444"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="521" id="mNz-9c-W4c"/>
@@ -109,6 +109,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="foodImg" destination="xqe-Wz-BIa" id="pxv-bQ-qe3"/>
+                        <outlet property="heartImg" destination="TpB-8B-evh" id="UZF-j8-wbC"/>
                         <outlet property="monsterImg" destination="hEU-eo-CWB" id="YTr-MH-dFz"/>
                     </connections>
                 </viewController>
@@ -122,7 +124,7 @@
         <image name="food.png" width="95" height="98"/>
         <image name="ground.png" width="1444" height="151"/>
         <image name="heart.png" width="95" height="98"/>
-        <image name="idle (1).png" width="889" height="615"/>
+        <image name="idle1.png" width="889" height="615"/>
         <image name="livespanel.png" width="468" height="137"/>
         <image name="skull.png" width="95" height="98"/>
     </resources>
