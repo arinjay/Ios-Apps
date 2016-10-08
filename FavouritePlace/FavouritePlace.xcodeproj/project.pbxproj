@@ -16,6 +16,7 @@
 		12C2F3561DA90C1D003CCC34 /* FavouritePlaceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C2F3551DA90C1D003CCC34 /* FavouritePlaceUITests.swift */; };
 		12C2F3641DA90D32003CCC34 /* yucca.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12C2F3631DA90D32003CCC34 /* yucca.jpg */; };
 		12C2F3661DA90DDE003CCC34 /* compass.png in Resources */ = {isa = PBXBuildFile; fileRef = 12C2F3651DA90DDE003CCC34 /* compass.png */; };
+		12C2F3681DA912D8003CCC34 /* yucca2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 12C2F3671DA912D8003CCC34 /* yucca2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		12C2F3571DA90C1D003CCC34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12C2F3631DA90D32003CCC34 /* yucca.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yucca.jpg; sourceTree = "<group>"; };
 		12C2F3651DA90DDE003CCC34 /* compass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = compass.png; sourceTree = "<group>"; };
+		12C2F3671DA912D8003CCC34 /* yucca2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yucca2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				12C2F3391DA90C1D003CCC34 /* Main.storyboard */,
 				12C2F33C1DA90C1D003CCC34 /* Assets.xcassets */,
 				12C2F3651DA90DDE003CCC34 /* compass.png */,
+				12C2F3671DA912D8003CCC34 /* yucca2.jpg */,
 				12C2F3631DA90D32003CCC34 /* yucca.jpg */,
 				12C2F33E1DA90C1D003CCC34 /* LaunchScreen.storyboard */,
 				12C2F3411DA90C1D003CCC34 /* Info.plist */,
@@ -239,6 +242,7 @@
 				12C2F3641DA90D32003CCC34 /* yucca.jpg in Resources */,
 				12C2F33D1DA90C1D003CCC34 /* Assets.xcassets in Resources */,
 				12C2F33B1DA90C1D003CCC34 /* Main.storyboard in Resources */,
+				12C2F3681DA912D8003CCC34 /* yucca2.jpg in Resources */,
 				12C2F3661DA90DDE003CCC34 /* compass.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
