@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CleanHood" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dyq-7S-kc2">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0f-jc-vUv">
+                                        <rect key="frame" x="318" y="16" width="42" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5dH-hN-jaU"/>
+                                            <constraint firstAttribute="width" constant="42" id="Ygr-6v-x5O"/>
+                                        </constraints>
+                                        <state key="normal" image="camera.png"/>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bannerlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="4Tz-YP-pbE">
+                                        <rect key="frame" x="129" y="16" width="116" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="116" id="eS5-5L-Rvp"/>
+                                            <constraint firstAttribute="height" constant="30" id="mtE-2Q-wI9"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="0.67467672413793101" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="H0f-jc-vUv" secondAttribute="bottom" constant="8" id="4fy-7Y-bcN"/>
+                                    <constraint firstItem="4Tz-YP-pbE" firstAttribute="leading" secondItem="Dyq-7S-kc2" secondAttribute="leading" constant="129" id="7SB-ph-WYT"/>
+                                    <constraint firstItem="4Tz-YP-pbE" firstAttribute="centerX" secondItem="Dyq-7S-kc2" secondAttribute="centerX" id="AgM-9p-Tqt"/>
+                                    <constraint firstAttribute="bottom" secondItem="4Tz-YP-pbE" secondAttribute="bottom" constant="8" id="dlF-Fr-Ud1"/>
+                                    <constraint firstAttribute="trailing" secondItem="H0f-jc-vUv" secondAttribute="trailing" constant="15" id="f1V-Vf-55h"/>
+                                    <constraint firstItem="H0f-jc-vUv" firstAttribute="leading" secondItem="4Tz-YP-pbE" secondAttribute="trailing" constant="73" id="sws-ap-RC8"/>
+                                    <constraint firstAttribute="height" constant="54" id="zBl-SI-ut8"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="67" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ucb-dY-UpU">
+                                <rect key="frame" x="0.0" y="55" width="375" height="612"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="NUi-dz-7fp">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="67"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NUi-dz-7fp" id="z7O-J3-Lgt">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="barrel-water-bridge.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="OBo-W3-wTm">
+                                                    <rect key="frame" x="17" y="6" width="66" height="52"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="0.8084590517241379" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ucb-dY-UpU" firstAttribute="top" secondItem="Dyq-7S-kc2" secondAttribute="bottom" constant="1" id="8HD-8a-zWa"/>
+                            <constraint firstItem="Ucb-dY-UpU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CbI-27-efB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ucb-dY-UpU" secondAttribute="bottom" id="Eer-1O-eAK"/>
+                            <constraint firstItem="Dyq-7S-kc2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="G1m-mr-K4f"/>
+                            <constraint firstAttribute="trailing" secondItem="Dyq-7S-kc2" secondAttribute="trailing" id="Kz4-fE-1is"/>
+                            <constraint firstAttribute="trailing" secondItem="Ucb-dY-UpU" secondAttribute="trailing" id="aZl-bD-lUr"/>
+                            <constraint firstItem="Dyq-7S-kc2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fTX-T0-ULT"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="447.5" y="437.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="bannerlogo.png" width="518" height="194"/>
+        <image name="barrel-water-bridge.jpg" width="550" height="440"/>
+        <image name="camera.png" width="100" height="77"/>
+    </resources>
+</document>
