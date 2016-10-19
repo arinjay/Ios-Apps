@@ -18,6 +18,7 @@
 		120DFC3B1DB6768800F2FE29 /* bannerlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 120DFC3A1DB6768800F2FE29 /* bannerlogo.png */; };
 		120DFC3D1DB676BC00F2FE29 /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 120DFC3C1DB676BC00F2FE29 /* camera.png */; };
 		120DFC3F1DB6780B00F2FE29 /* barrel-water-bridge.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 120DFC3E1DB6780B00F2FE29 /* barrel-water-bridge.jpg */; };
+		12C5F0E11DB77E1C0077DCAF /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C5F0E01DB77E1C0077DCAF /* PostCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		120DFC3A1DB6768800F2FE29 /* bannerlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bannerlogo.png; sourceTree = "<group>"; };
 		120DFC3C1DB676BC00F2FE29 /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = camera.png; sourceTree = "<group>"; };
 		120DFC3E1DB6780B00F2FE29 /* barrel-water-bridge.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "barrel-water-bridge.jpg"; sourceTree = "<group>"; };
+		12C5F0E01DB77E1C0077DCAF /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +143,17 @@
 			isa = PBXGroup;
 			children = (
 				120DFC381DB673CE00F2FE29 /* post.swift */,
+				12C5F0DF1DB77DD90077DCAF /* View */,
 			);
 			name = Modal;
+			sourceTree = "<group>";
+		};
+		12C5F0DF1DB77DD90077DCAF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				12C5F0E01DB77E1C0077DCAF /* PostCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +293,7 @@
 				120DFC391DB673CE00F2FE29 /* post.swift in Sources */,
 				120DFC0C1DB673B000F2FE29 /* ViewController.swift in Sources */,
 				120DFC0A1DB673B000F2FE29 /* AppDelegate.swift in Sources */,
+				12C5F0E11DB77E1C0077DCAF /* PostCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,6 +518,7 @@
 				120DFC301DB673B000F2FE29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		120DFC311DB673B000F2FE29 /* Build configuration list for PBXNativeTarget "CleanHoodTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +527,7 @@
 				120DFC331DB673B000F2FE29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		120DFC341DB673B000F2FE29 /* Build configuration list for PBXNativeTarget "CleanHoodUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +536,7 @@
 				120DFC361DB673B000F2FE29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
