@@ -99,7 +99,7 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="69" id="HYF-3f-qyg">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecipeCell" rowHeight="69" id="HYF-3f-qyg" customClass="RecipeCell" customModule="FavRecipe" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="92" width="375" height="69"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HYF-3f-qyg" id="qqe-VG-irS">
@@ -137,6 +137,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="recipeImg" destination="FWg-68-TvC" id="lcU-X9-UrM"/>
+                                            <outlet property="recipeTitle" destination="dqU-Ca-eTc" id="F0J-XM-aLf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
