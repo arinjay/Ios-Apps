@@ -27,9 +27,29 @@ class Pieview: UIView {
         didSet {updateLayerproperties()}
     }
     
-    var 
+    var percentageLayer:CATextLayer!
+    @IBInspectable var showPercentage:Bool = true {
+        didSet {updateLayerproperties()}
+    }
     
+    @IBInspectable var percentagePosition = 100 {
+        didSet {updateLayerproperties()}
+    }
     
+    @IBInspectable var percentageColor:UIColor = UIColor.white {
+        didSet{updateLayerproperties()}
+    }
+    
+    var lineWidth:CGFloat = 1
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        createChart()
+    }
+    
+    func createChart(){
+        
+    }
     
     func updateLayerproperties() {
         
