@@ -7,23 +7,43 @@
 //
 
 import UIKit
+import CoreData
 
 class GroceryTableViewController: UITableViewController {
 
     
-    var Grocery = [String]()
-    
+    //var Grocery = [String]()
+    var Grocery = [NSManagedObject]()
+    var managedObjectContext : NSManagedObjectContext?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        managedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        
+        
     }
 
+    func loadData(){
+        //let request = NSFetchRequest<NSManagedObject> = NSFetchRequest(entityName: "Grocery")
+        let request : NSFetchRequest<NSManagedObject> = NSFetchRequest(entityName: "Grocery")
+        
+        do {
+            let result = try managedObjectContext?.fetch(request)
+            Grocery = result!
+            tableView.reloadData()
+        }
+        catch{
+        fatalError("Error")
+        }
+        tableView.reloadData()
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -40,10 +60,24 @@ class GroceryTableViewController: UITableViewController {
             let add = UIAlertAction(title: "Add", style: UIAlertActionStyle.default) { [weak self] (action:UIAlertAction) in
             
             let z = alertController.textFields?.first
-            self?.Grocery.append((z?.text)!)
-            self?.tableView.reloadData()
+                
+            let entity = NSEntityDescription.entity(forEntityName: "Grocery", in: (self?.managedObjectContext)!)
+                
+            let grocery = NSManagedObject(entity: entity!, insertInto: self?.managedObjectContext)
+            
+            grocery.setValue(z!.text!, forKey: "item")
+                
+                do {
+                    try self?.managedObjectContext?.save()
+                }
+                catch{fatalError("Error")
+                
+                
+            //self?.Grocery.append((z?.text)!)
+            //self?.tableView.reloadData()
         }
-        
+        self?.loadData()
+    }
                                                                 //error only.default
             let cancel = UIAlertAction(title: "cancel", style: UIAlertActionStyle.default, handler: nil)
             alertController.addAction(add)
@@ -71,8 +105,10 @@ class GroceryTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {                                                       // did'nt add the identifier name at rableviewcell
         let cell = tableView.dequeueReusableCell(withIdentifier: "Grocery", for: indexPath)
 
-        cell.textLabel?.text = self.Grocery[indexPath.row]
+        //cell.textLabel?.text = self.Grocery[indexPath.row]
 
+        let grocery = self.Grocery[indexPath.row]
+        cell.textLabel?.text = grocery.value(forKey: "item") as? String
         return cell
     }
 }
