@@ -15,8 +15,10 @@
 		C7B5B7511E5482210098FC5C /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B7491E5482210098FC5C /* Item+CoreDataProperties.swift */; };
 		C7B5B7521E5482210098FC5C /* ItemType+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B74A1E5482210098FC5C /* ItemType+CoreDataClass.swift */; };
 		C7B5B7531E5482210098FC5C /* ItemType+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B74B1E5482210098FC5C /* ItemType+CoreDataProperties.swift */; };
+		C7B5B7571E549D0D0098FC5C /* tesla.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C7B5B7561E549D0D0098FC5C /* tesla.jpg */; };
+		C7B5B75A1E549E0E0098FC5C /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B7591E549E0E0098FC5C /* MaterialView.swift */; };
 		C7C5E73D1E53A2560075ADF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5E73C1E53A2560075ADF0 /* AppDelegate.swift */; };
-		C7C5E73F1E53A2560075ADF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5E73E1E53A2560075ADF0 /* ViewController.swift */; };
+		C7C5E73F1E53A2560075ADF0 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C5E73E1E53A2560075ADF0 /* MainVC.swift */; };
 		C7C5E7421E53A2560075ADF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7C5E7401E53A2560075ADF0 /* Main.storyboard */; };
 		C7C5E7451E53A2560075ADF0 /* BucketList.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7C5E7431E53A2560075ADF0 /* BucketList.xcdatamodeld */; };
 		C7C5E7471E53A2560075ADF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7C5E7461E53A2560075ADF0 /* Assets.xcassets */; };
@@ -32,9 +34,11 @@
 		C7B5B7491E5482210098FC5C /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C7B5B74A1E5482210098FC5C /* ItemType+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C7B5B74B1E5482210098FC5C /* ItemType+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ItemType+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C7B5B7561E549D0D0098FC5C /* tesla.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tesla.jpg; sourceTree = "<group>"; };
+		C7B5B7591E549E0E0098FC5C /* MaterialView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
 		C7C5E7391E53A2560075ADF0 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7C5E73C1E53A2560075ADF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7C5E73E1E53A2560075ADF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C7C5E73E1E53A2560075ADF0 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C7C5E7411E53A2560075ADF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7C5E7441E53A2560075ADF0 /* BucketList.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BucketList.xcdatamodel; sourceTree = "<group>"; };
 		C7C5E7461E53A2560075ADF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -68,6 +72,37 @@
 			name = Generated;
 			sourceTree = "<group>";
 		};
+		C7B5B7541E5484FF0098FC5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C7B5B7441E5482210098FC5C /* Store+CoreDataClass.swift */,
+				C7B5B7461E5482210098FC5C /* Image+CoreDataClass.swift */,
+				C7B5B7481E5482210098FC5C /* Item+CoreDataClass.swift */,
+				C7B5B74A1E5482210098FC5C /* ItemType+CoreDataClass.swift */,
+				C7B5B7551E5485060098FC5C /* Generated */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		C7B5B7551E5485060098FC5C /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				C7B5B7451E5482210098FC5C /* Store+CoreDataProperties.swift */,
+				C7B5B7471E5482210098FC5C /* Image+CoreDataProperties.swift */,
+				C7B5B7491E5482210098FC5C /* Item+CoreDataProperties.swift */,
+				C7B5B74B1E5482210098FC5C /* ItemType+CoreDataProperties.swift */,
+			);
+			name = Generated;
+			sourceTree = "<group>";
+		};
+		C7B5B7581E549DEA0098FC5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7B5B7591E549E0E0098FC5C /* MaterialView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		C7C5E7301E53A2560075ADF0 = {
 			isa = PBXGroup;
 			children = (
@@ -87,17 +122,12 @@
 		C7C5E73B1E53A2560075ADF0 /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
-				C7B5B7441E5482210098FC5C /* Store+CoreDataClass.swift */,
-				C7B5B7451E5482210098FC5C /* Store+CoreDataProperties.swift */,
-				C7B5B7461E5482210098FC5C /* Image+CoreDataClass.swift */,
-				C7B5B7471E5482210098FC5C /* Image+CoreDataProperties.swift */,
-				C7B5B7481E5482210098FC5C /* Item+CoreDataClass.swift */,
-				C7B5B7491E5482210098FC5C /* Item+CoreDataProperties.swift */,
-				C7B5B74A1E5482210098FC5C /* ItemType+CoreDataClass.swift */,
-				C7B5B74B1E5482210098FC5C /* ItemType+CoreDataProperties.swift */,
+				C7B5B7581E549DEA0098FC5C /* View */,
+				C7B5B7541E5484FF0098FC5C /* Models */,
 				C7B5B7421E5474670098FC5C /* Model */,
 				C7C5E73C1E53A2560075ADF0 /* AppDelegate.swift */,
-				C7C5E73E1E53A2560075ADF0 /* ViewController.swift */,
+				C7B5B7561E549D0D0098FC5C /* tesla.jpg */,
+				C7C5E73E1E53A2560075ADF0 /* MainVC.swift */,
 				C7C5E7401E53A2560075ADF0 /* Main.storyboard */,
 				C7C5E7461E53A2560075ADF0 /* Assets.xcassets */,
 				C7C5E7481E53A2560075ADF0 /* LaunchScreen.storyboard */,
@@ -167,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7C5E74A1E53A2560075ADF0 /* LaunchScreen.storyboard in Resources */,
+				C7B5B7571E549D0D0098FC5C /* tesla.jpg in Resources */,
 				C7C5E7471E53A2560075ADF0 /* Assets.xcassets in Resources */,
 				C7C5E7421E53A2560075ADF0 /* Main.storyboard in Resources */,
 			);
@@ -180,8 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B5B74D1E5482210098FC5C /* Store+CoreDataProperties.swift in Sources */,
-				C7C5E73F1E53A2560075ADF0 /* ViewController.swift in Sources */,
+				C7C5E73F1E53A2560075ADF0 /* MainVC.swift in Sources */,
 				C7B5B7521E5482210098FC5C /* ItemType+CoreDataClass.swift in Sources */,
+				C7B5B75A1E549E0E0098FC5C /* MaterialView.swift in Sources */,
 				C7B5B74C1E5482210098FC5C /* Store+CoreDataClass.swift in Sources */,
 				C7B5B74E1E5482210098FC5C /* Image+CoreDataClass.swift in Sources */,
 				C7C5E7451E53A2560075ADF0 /* BucketList.xcdatamodeld in Sources */,
