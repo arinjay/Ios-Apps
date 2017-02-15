@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0820"
+   LastUpgradeVersion = "0810"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C706F46A1E4C5F7B0014DEB5"
+               BlueprintIdentifier = "C7C5E7381E53A2560075ADF0"
                BuildableName = "BucketList.app"
                BlueprintName = "BucketList"
                ReferencedContainer = "container:BucketList.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C706F46A1E4C5F7B0014DEB5"
+            BlueprintIdentifier = "C7C5E7381E53A2560075ADF0"
             BuildableName = "BucketList.app"
             BlueprintName = "BucketList"
             ReferencedContainer = "container:BucketList.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C706F46A1E4C5F7B0014DEB5"
+            BlueprintIdentifier = "C7C5E7381E53A2560075ADF0"
             BuildableName = "BucketList.app"
             BlueprintName = "BucketList"
             ReferencedContainer = "container:BucketList.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C706F46A1E4C5F7B0014DEB5"
+            BlueprintIdentifier = "C7C5E7381E53A2560075ADF0"
             BuildableName = "BucketList.app"
             BlueprintName = "BucketList"
             ReferencedContainer = "container:BucketList.xcodeproj">
