@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C71E56221E5728A2004C2F42 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71E56211E5728A2004C2F42 /* ItemCell.swift */; };
 		C7B5B74C1E5482210098FC5C /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B7441E5482210098FC5C /* Store+CoreDataClass.swift */; };
 		C7B5B74D1E5482210098FC5C /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B7451E5482210098FC5C /* Store+CoreDataProperties.swift */; };
 		C7B5B74E1E5482210098FC5C /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B7461E5482210098FC5C /* Image+CoreDataClass.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C71E56211E5728A2004C2F42 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		C7B5B7441E5482210098FC5C /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C7B5B7451E5482210098FC5C /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C7B5B7461E5482210098FC5C /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				C7B5B7591E549E0E0098FC5C /* MaterialView.swift */,
+				C71E56211E5728A2004C2F42 /* ItemCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C71E56221E5728A2004C2F42 /* ItemCell.swift in Sources */,
 				C7B5B74D1E5482210098FC5C /* Store+CoreDataProperties.swift in Sources */,
 				C7C5E73F1E53A2560075ADF0 /* MainVC.swift in Sources */,
 				C7B5B7521E5482210098FC5C /* ItemType+CoreDataClass.swift in Sources */,

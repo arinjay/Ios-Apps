@@ -38,7 +38,7 @@
                                 <rect key="frame" x="16" y="146" width="343" height="521"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="148" id="iuU-2E-6aF">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="148" id="iuU-2E-6aF" customClass="ItemCell" customModule="BucketList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iuU-2E-6aF" id="4Vo-Nf-z2B">
@@ -101,6 +101,12 @@
                                                 <constraint firstItem="zmy-i7-Lc7" firstAttribute="leading" secondItem="4Vo-Nf-z2B" secondAttribute="leadingMargin" id="r6S-Ab-0vO"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="details" destination="GhJ-8P-ZYS" id="STy-By-P7D"/>
+                                            <outlet property="price" destination="jQg-1g-sOA" id="Ag9-83-0hr"/>
+                                            <outlet property="thumb" destination="ci0-bU-ebF" id="2MP-Ei-GC3"/>
+                                            <outlet property="title" destination="NUn-jE-rs1" id="1te-Mc-6Zc"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -119,6 +125,10 @@
                     <navigationItem key="navigationItem" title="Bucket List" id="9EI-j8-zBO">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Xps-dZ-Ui5"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="segment" destination="AEW-na-Zzw" id="Hlh-GL-Wyc"/>
+                        <outlet property="tableView" destination="4n2-KG-enq" id="gUc-tD-jEm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
