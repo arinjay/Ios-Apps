@@ -38,7 +38,7 @@
                                 <rect key="frame" x="16" y="146" width="343" height="521"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="148" id="iuU-2E-6aF" customClass="ItemCell" customModule="BucketList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemCell" rowHeight="148" id="iuU-2E-6aF" customClass="ItemCell" customModule="BucketList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="148"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iuU-2E-6aF" id="4Vo-Nf-z2B">
