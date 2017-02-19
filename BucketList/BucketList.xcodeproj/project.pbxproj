@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C71E56221E5728A2004C2F42 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71E56211E5728A2004C2F42 /* ItemCell.swift */; };
+		C76553CA1E59B1E800B5CB85 /* ItemDetailVs.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76553C91E59B1E800B5CB85 /* ItemDetailVs.swift */; };
+		C76553CC1E59B6D400B5CB85 /* imagePick.png in Resources */ = {isa = PBXBuildFile; fileRef = C76553CB1E59B6D400B5CB85 /* imagePick.png */; };
 		C7B5B74C1E5482210098FC5C /* Store+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B7441E5482210098FC5C /* Store+CoreDataClass.swift */; };
 		C7B5B74D1E5482210098FC5C /* Store+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B7451E5482210098FC5C /* Store+CoreDataProperties.swift */; };
 		C7B5B74E1E5482210098FC5C /* Image+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5B7461E5482210098FC5C /* Image+CoreDataClass.swift */; };
@@ -28,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		C71E56211E5728A2004C2F42 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		C76553C91E59B1E800B5CB85 /* ItemDetailVs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemDetailVs.swift; sourceTree = "<group>"; };
+		C76553CB1E59B6D400B5CB85 /* imagePick.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagePick.png; sourceTree = "<group>"; };
 		C7B5B7441E5482210098FC5C /* Store+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C7B5B7451E5482210098FC5C /* Store+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Store+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C7B5B7461E5482210098FC5C /* Image+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Image+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -129,8 +133,10 @@
 				C7B5B7541E5484FF0098FC5C /* Models */,
 				C7B5B7421E5474670098FC5C /* Model */,
 				C7C5E73C1E53A2560075ADF0 /* AppDelegate.swift */,
+				C76553C91E59B1E800B5CB85 /* ItemDetailVs.swift */,
 				C7B5B7561E549D0D0098FC5C /* tesla.jpg */,
 				C7C5E73E1E53A2560075ADF0 /* MainVC.swift */,
+				C76553CB1E59B6D400B5CB85 /* imagePick.png */,
 				C7C5E7401E53A2560075ADF0 /* Main.storyboard */,
 				C7C5E7461E53A2560075ADF0 /* Assets.xcassets */,
 				C7C5E7481E53A2560075ADF0 /* LaunchScreen.storyboard */,
@@ -203,6 +209,7 @@
 				C7B5B7571E549D0D0098FC5C /* tesla.jpg in Resources */,
 				C7C5E7471E53A2560075ADF0 /* Assets.xcassets in Resources */,
 				C7C5E7421E53A2560075ADF0 /* Main.storyboard in Resources */,
+				C76553CC1E59B6D400B5CB85 /* imagePick.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,6 +226,7 @@
 				C7B5B7521E5482210098FC5C /* ItemType+CoreDataClass.swift in Sources */,
 				C7B5B75A1E549E0E0098FC5C /* MaterialView.swift in Sources */,
 				C7B5B74C1E5482210098FC5C /* Store+CoreDataClass.swift in Sources */,
+				C76553CA1E59B1E800B5CB85 /* ItemDetailVs.swift in Sources */,
 				C7B5B74E1E5482210098FC5C /* Image+CoreDataClass.swift in Sources */,
 				C7C5E7451E53A2560075ADF0 /* BucketList.xcdatamodeld in Sources */,
 				C7C5E73D1E53A2560075ADF0 /* AppDelegate.swift in Sources */,
