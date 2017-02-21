@@ -10,6 +10,12 @@ import UIKit
 
 class ItemDetailVs: UIViewController {
 
+    @IBOutlet weak var storePicker : UIPickerView!
+    @IBOutlet weak var titleField : CustomTextField!
+    @IBOutlet weak var PriceField : CustomTextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,9 +24,4 @@ class ItemDetailVs: UIViewController {
             topItem.backBarButtonItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         }
     }
-
-    
-
-   
-
 }
