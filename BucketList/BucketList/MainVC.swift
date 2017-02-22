@@ -138,10 +138,18 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource,NSFetch
         item.price = 1000
         item.details = "Will buy this one before 2017"
         
+        let item3 = Item(context: context)
+        item3.title = "Jaguar"
+        item3.price = 15000
+        item3.details = "Get this beast before 2020."
+        
         let item2 = Item(context: context)
         item2.title = "MacBook Pro"
         item2.price = 1500
         item2.details = "Awesome"
+        
+        xy.saveContext()
+        
     }
 
 }

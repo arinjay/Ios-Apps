@@ -70,7 +70,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tesla.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ci0-bU-ebF">
-                                                            <rect key="frame" x="8" y="15.5" width="100" height="100"/>
+                                                            <rect key="frame" x="8" y="15" width="100" height="100"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="100" id="IId-E6-tRx"/>
                                                                 <constraint firstAttribute="width" constant="100" id="dHE-Q0-qam"/>
@@ -182,7 +182,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Details" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sNr-5H-uNO">
-                                <rect key="frame" x="18" y="211" width="341" height="53"/>
+                                <rect key="frame" x="18" y="211" width="331" height="53"/>
                                 <color key="backgroundColor" red="0.90301416280000002" green="0.90301416280000002" blue="0.90301416280000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -246,6 +246,12 @@
                             <color key="tintColor" red="1" green="0.1132692677" blue="0.14505652299999999" alpha="0.76319028249999998" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="PriceField" destination="4r4-aw-awZ" id="iJE-dD-QAD"/>
+                        <outlet property="detailField" destination="sNr-5H-uNO" id="sDR-Ao-Kq1"/>
+                        <outlet property="storePicker" destination="GE4-EV-OTe" id="bLg-MH-SWm"/>
+                        <outlet property="titleField" destination="fjq-Xd-FgN" id="xMl-uF-w1Z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q8s-RT-KrH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
