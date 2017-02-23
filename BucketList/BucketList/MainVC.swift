@@ -75,6 +75,7 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource,NSFetch
         let controller = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
         
         self.Controller = controller
+        controller.delegate = self
         
         do {
             try controller.performFetch()

@@ -20,6 +20,28 @@ class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     var stores = [Store]()
     
     
+    @IBAction func savePressed(_ sender: UIButton) {
+        
+        let item = Item(context: context)
+        if  let title = titleField.text {
+            item.title = title
+        }
+        
+        if let price = PriceField.text {
+            //item.price = price  //cannot assign value of string to double
+            item.price = (price as NSString).doubleValue
+        }
+        
+        if let detail = detailField.text {
+            item.details = detail
+        }
+        
+        
+        item.toStore = stores[storePicker.selectedRow(inComponent: 0)]
+        xy.saveContext()
+        
+        _ = navigationController?.popViewController(animated: true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +53,7 @@ class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         
         storePicker.delegate = self
         storePicker.dataSource = self
-        
+//        
 //        let store = Store(context: context)
 //        store.name = "Amazon"
 //        let store1 = Store(context: context)
