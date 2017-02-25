@@ -18,11 +18,23 @@ class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     
     
     var stores = [Store]()
+    var itemToEdit: Item?
     
     
     @IBAction func savePressed(_ sender: UIButton) {
         
-        let item = Item(context: context)
+        var item: Item!
+        
+        //
+        if itemToEdit == nil {
+        //let item = Item(context: context)
+            item = Item(context: context)
+        }
+        else{
+            item = itemToEdit
+        }
+        
+        
         if  let title = titleField.text {
             item.title = title
         }
@@ -42,6 +54,29 @@ class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         
         _ = navigationController?.popViewController(animated: true)
     }
+    
+    
+    func loadItemData(){
+        if let item = itemToEdit {
+            titleField.text = item.title
+            detailField.text = item.details
+            PriceField.text = "\(PriceField.text)"
+        
+        
+            if let store = item.toStore{
+                var index = 0
+                repeat {
+                    let s = stores[index]
+                    if s.name == store.name {
+                        storePicker.selectRow(index, inComponent: 0, animated: false)
+                        break
+                    }
+                    index += 1
+                }  while (index < stores.count)
+            }
+    }
+}
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,6 +103,9 @@ class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
 //        
 //        xy.saveContext()
         getStores()
+        if itemToEdit != nil{
+            loadItemData()
+        }
 
         
     }

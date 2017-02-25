@@ -65,7 +65,27 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource,NSFetch
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let obj = Controller.fetchedObjects , obj.count > 0 {
+            let item = obj[indexPath.row]
+            performSegue(withIdentifier: "ItemDetailVs", sender: item)
+        }
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ItemDetailVs" {
+            if let destination = segue.destination as? ItemDetailVs {
+                if let item  = sender as? Item {
+                    destination.itemToEdit = item
+                }
+            }
+        }
+    }
 
+    
+    
+    
     func attempptFetch(){
         let fetchRequest: NSFetchRequest<Item> = Item.fetchRequest()
         let dateSort = NSSortDescriptor(key: "created", ascending: false)
