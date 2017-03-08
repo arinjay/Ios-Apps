@@ -9,8 +9,9 @@
 import UIKit
 import CoreData
 
-class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource {
+class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var thungImg: UIImageView!
     @IBOutlet weak var storePicker : UIPickerView!
     @IBOutlet weak var titleField : UITextField!
     @IBOutlet weak var PriceField : UITextField!
@@ -20,10 +21,33 @@ class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     var stores = [Store]()
     var itemToEdit: Item?
     
+    var imagePicker = UIImagePickerController()
+    
+    @IBAction func deletePressed(_ sender: UIBarButtonItem) {
+    
+        if itemToEdit != nil {
+        context.delete(itemToEdit!)
+        xy.saveContext()
+        }
+    
+        _ = navigationController?.popViewController(animated: true)
+    
+    }
+    
+    
+    @IBAction func addImage(_ sender: Any) {
+        
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     
     @IBAction func savePressed(_ sender: UIButton) {
         
         var item: Item!
+        
+        let picture = Image(context: context)
+        picture.image = thungImg.image
+        //item.toImage? = picture
         
         //
         if itemToEdit == nil {
@@ -32,8 +56,9 @@ class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         }
         else{
             item = itemToEdit
+           
         }
-        
+        item.toImage = picture
         
         if  let title = titleField.text {
             item.title = title
@@ -62,6 +87,8 @@ class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
             detailField.text = item.details
             PriceField.text = "\(PriceField.text)"
         
+            
+            thungImg.image = item.toImage?.image as? UIImage
         
             if let store = item.toStore{
                 var index = 0
@@ -77,6 +104,14 @@ class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     }
 }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let img = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            thungImg.image = img
+        }
+        imagePicker.dismiss(animated: true, completion: nil)
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,6 +123,13 @@ class ItemDetailVs: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         
         storePicker.delegate = self
         storePicker.dataSource = self
+        
+        imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        
+        
+        
+        
 //        
 //        let store = Store(context: context)
 //        store.name = "Amazon"

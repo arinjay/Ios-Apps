@@ -65,7 +65,7 @@ class MainVC: UIViewController,UITableViewDelegate,UITableViewDataSource,NSFetch
     }
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {  // called on clicking the item of a tableview.
         if let obj = Controller.fetchedObjects , obj.count > 0 {
             let item = obj[indexPath.row]
             performSegue(withIdentifier: "ItemDetailVs", sender: item)

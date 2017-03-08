@@ -1,4 +1,14 @@
 {
+    "title": "BucketList",
+    "category-ids": ["ToDo"],
+    "description": "Let user create list of favourite items,add & edit image, pirce,description",
+    "source": "https://github.com/arinjay/BucketList",
+    "screenshots": ["http://something.com/image.png"],
+    "date_added": "Feb 25 2017",
+    "suggested_by": "@github_arinjay"
+}
+
+{
   "images" : [
     {
       "idiom" : "iphone",
