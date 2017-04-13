@@ -31,10 +31,33 @@ class GameScene: SKScene {
         border.friction = 0
         border.restitution = 1
         self.physicsBody = border
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+     
+        for touch in touches {
+            let location = touch.location(in: self)  // grab location of finger inside view
+            
+            main.run(SKAction.moveTo(x: location.x, duration: 0.2))
+        }
+        
+    }
+    
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
+        
+        for touch in touches {
+            let location = touch.location(in: self)  // grab location of finger inside view
+            
+            main.run(SKAction.moveTo(x: location.x, duration: 0.2))
+        }
+        
         
     }
     
     override func update(_ currentTime: TimeInterval) {
         // Called before each frame is rendered
+        
+        //moving enemy
+        enemy.run(SKAction.moveTo(x: ball.position.x, duration: 1.0))
     }
 }
