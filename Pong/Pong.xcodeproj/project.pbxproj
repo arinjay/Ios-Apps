@@ -429,6 +429,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Arinjay.Pong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -441,6 +442,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.Arinjay.Pong;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -517,6 +519,7 @@
 				C73C8D8D1E980BA4007634D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C73C8D8E1E980BA4007634D9 /* Build configuration list for PBXNativeTarget "PongTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +528,7 @@
 				C73C8D901E980BA4007634D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C73C8D911E980BA4007634D9 /* Build configuration list for PBXNativeTarget "PongUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +537,7 @@
 				C73C8D931E980BA4007634D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
