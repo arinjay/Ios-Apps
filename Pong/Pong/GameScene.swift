@@ -29,7 +29,7 @@ class GameScene: SKScene {
         
         
         //  angle of
-        ball.physicsBody?.applyImpulse(CGVector(dx: 20, dy:20))
+       ball.physicsBody?.applyImpulse(CGVector(dx: 20, dy:20))
         
         //create border around scene
         let border = SKPhysicsBody(edgeLoopFrom: self.frame)
@@ -42,13 +42,13 @@ class GameScene: SKScene {
     func startGame(){
         
         score = [0,0]
+        
     }
     
     func addScore(playerwhoWon: SKSpriteNode){
         
         ball.position = CGPoint(x: 0, y: 0)
-        //ball.physicsBody?.velocity = CGVector(dx: 10, dy: 10)
-        
+        ball.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
         if playerwhoWon == main {
             score[0] += 1
               ball.physicsBody?.applyImpulse(CGVector(dx: 20, dy:20))
@@ -89,15 +89,13 @@ class GameScene: SKScene {
         //moving enemy
         enemy.run(SKAction.moveTo(x: ball.position.x, duration: 1.0))
         
-        if ball.position.y <= main.position.y - 70 {
+        
+        if ball.position.y <= main.position.y - 30 {
             addScore(playerwhoWon: enemy)
-            
         }
-        else if ball.position.y >= main.position.y + 70 {
+        else if ball.position.y >= enemy.position.y + 30 {
             addScore(playerwhoWon: main)
         }
-        
-        
         
         
     }
