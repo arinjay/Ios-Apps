@@ -17,6 +17,7 @@
 		C73C8D711E980BA3007634D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73C8D6F1E980BA3007634D9 /* LaunchScreen.storyboard */; };
 		C73C8D7C1E980BA3007634D9 /* PongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C8D7B1E980BA3007634D9 /* PongTests.swift */; };
 		C73C8D871E980BA4007634D9 /* PongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73C8D861E980BA4007634D9 /* PongUITests.swift */; };
+		C76FD0651EA29B2700AA69C8 /* LLPIXEL3.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C76FD0641EA29B2700AA69C8 /* LLPIXEL3.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		C73C8D821E980BA4007634D9 /* PongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C73C8D861E980BA4007634D9 /* PongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongUITests.swift; sourceTree = "<group>"; };
 		C73C8D881E980BA4007634D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C76FD0641EA29B2700AA69C8 /* LLPIXEL3.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = LLPIXEL3.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 		C73C8D5F1E980BA3007634D9 /* Pong */ = {
 			isa = PBXGroup;
 			children = (
+				C76FD0641EA29B2700AA69C8 /* LLPIXEL3.ttf */,
 				C73C8D601E980BA3007634D9 /* AppDelegate.swift */,
 				C73C8D621E980BA3007634D9 /* GameScene.sks */,
 				C73C8D641E980BA3007634D9 /* Actions.sks */,
@@ -242,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C73C8D6C1E980BA3007634D9 /* Main.storyboard in Resources */,
+				C76FD0651EA29B2700AA69C8 /* LLPIXEL3.ttf in Resources */,
 				C73C8D631E980BA3007634D9 /* GameScene.sks in Resources */,
 				C73C8D6E1E980BA3007634D9 /* Assets.xcassets in Resources */,
 				C73C8D711E980BA3007634D9 /* LaunchScreen.storyboard in Resources */,
