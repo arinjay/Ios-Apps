@@ -87,11 +87,11 @@ class ViewController: UIViewController {
         let getRightAnswer = allQuestion.list[totalCount].correct
         if(getRightAnswer == pickedAnswer){
             print("correct")
-            ProgressHUD.showSuccess("Correct")
+            //ProgressHUD.showSuccess("Correct")
             changesForCorrectAnswer()
         }
         else {
-            ProgressHUD.showError("Wrong")
+            //ProgressHUD.showError("Wrong")
             print("wrong choice")
         }
     }
@@ -99,6 +99,9 @@ class ViewController: UIViewController {
     
     func startOver() {
         totalCount = 0
+        scoreCount = 0
+        changesForCorrectAnswer()
+        updateUI()
         nextQuestion()
     }
     
